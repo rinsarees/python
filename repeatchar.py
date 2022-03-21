@@ -1,11 +1,14 @@
-print("Enter the String:")
-text = input()
-print("Enter the Character:")
-char = input()
-textLen = len(text)
-sum = 0
-for i in range(textLen):
-    if char==text[i]:
-        sum = sum+1
-print("\nOccurrence of Given Character is:")
-print(sum)
+string = input("Enter the string:")
+string = string.replace(" ","").lower()
+characterList = {}
+for x in string:
+	if x in characterList:
+		characterList[x] +=1
+	else:
+		characterList[x] =1
+count = 0
+for x in characterList:
+	if characterList[x]>1:
+		count +=1
+print("Count of repeated characters")
+print(count)

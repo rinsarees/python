@@ -1,8 +1,9 @@
 
-vowels = ('a', 'e', 'i', 'o', 'u')
-
-index = vowels.index('e')
-print('The index of e:', index)
-
-index = vowels.index('i')
-print('The index of i:', index)
+tuple_1 = ('a','b','c','d','e','f')
+print(tuple_1)
+string = input("Enter the char want to check:")
+try:
+	index = tuple_1.index(string)
+	print("Index of",string,"is",index)
+except Exception as e:
+	print("Input given is not in tuple")
